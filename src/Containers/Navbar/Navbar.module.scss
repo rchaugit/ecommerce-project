@@ -1,0 +1,21 @@
+.navbar {
+  width: 100vw;
+  height: 6vh;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  &__logo {
+    height: 4vh;
+    width: 4vw;
+  }
+  &__search {
+    height: 4vh;
+    width: 50vw;
+  }
+  &__obj {
+    color: white;
+    text-decoration: none;
+  }
+}
