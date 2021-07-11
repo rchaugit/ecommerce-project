@@ -1,36 +1,22 @@
 import './App.module.scss';
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
 import Navbar from './Containers/Navbar';
-
 import Home from './Containers/Home';
-import Checkout from './Containers/Checkout';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 
 function App() {
-
   return (
     <Router>
-      <div className="App">
-        <Navbar />
-        <div className="content">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/checkout">
-              <Checkout />
-            </Route>
-            <Route path="/about">
-              
-            </Route>
-            <Route path="/contact">
-              
-            </Route>
-          </Switch>
-        </div>
+      <div>
+        <Switch>  
+          <div className="App">
+            <Navbar />
+           <Home />
+          </div>
+        </Switch>
       </div>
     </Router>
+
   );
 }
 
