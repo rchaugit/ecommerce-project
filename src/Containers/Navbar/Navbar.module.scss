@@ -1,21 +1,22 @@
-.navbar {
-  width: 100vw;
-  height: 6vh;
+.Navbar {
+  position: fixed;
   background-color: black;
+  height: 90px;
+  width: 100vw;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   &__logo {
-    height: 4vh;
-    width: 4vw;
-  }
-  &__search {
-    height: 4vh;
-    width: 50vw;
+    align-items: center;
+    filter: invert(1);
+    height: 70px;
+    width: 100px;
   }
   &__obj {
     color: white;
     text-decoration: none;
+    font-size: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
   }
+
 }
