@@ -1,5 +1,4 @@
 import Cart from '../../Components/Cart';
-import Payment from '../../Components/Payment';
 import styles from './Checkout.module.scss';
 
 import { useState, useEffect } from 'react';
@@ -25,7 +24,6 @@ const Checkout = () => {
     <>
       <div className={styles.checkout}>
       <Cart cartItem={cartItem} rmFromCart={rmFromCart}/>
-      <Payment />
       </div>
     </>
   )

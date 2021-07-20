@@ -1,6 +1,6 @@
 import styles from './Cart.module.scss';
 
-const Cart = ( { cartItem, rmFromCart }) => {
+const Cart = ({ cartItem, rmFromCart }) => {
 
   return (
     <>
@@ -8,11 +8,11 @@ const Cart = ( { cartItem, rmFromCart }) => {
         <h2>Cart Items</h2>
         {cartItem.map((item) => (
           <div className={styles.cart__product} key={item.id}>
-            <img className={styles.cart__img} src={item.product.img}></img>
-            <p className={styles.cart__title}>Item: {item.product.item} </p>
-            <p className={styles.cart__price}>Price:${item.product.price}</p>
-            <button className={styles.cart__button} onClick = {() => 
-              {rmFromCart({cartItem})
+            <img className={styles.cart__product_img} src={item.product.img}></img>
+            <p className={styles.cart__product_title}>Item: {item.product.item} </p>
+            <p className={styles.cart__product_price}>Price:${item.product.price}</p>
+            <button className={styles.cart__product_button} onClick = {() => 
+              {rmFromCart(item.id)
               }}>Remove from Cart</button>
           </div>
         ))}

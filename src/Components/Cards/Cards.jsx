@@ -1,16 +1,20 @@
 import styles from './Cards.module.scss'
+import { getProductInfo, addToCart } from '../../services/crud.js'
+import { Link } from 'react-router-dom'
 
-const Cards = ( { product, addToCart }) => {
+const Cards = ({ product, addToCart }) => {
 
   return (
     <>
       <div className={styles.catalog}>
-        {product.map((product) => (
+        {product.map((product) => ( //map of product catalog creating a card for each entry
           <div className={styles.catalog__product} key={product.id}>
-            <img className={styles.catalog__img} src={product.img}></img>
-            <p className={styles.catalog__item}>{product.item} </p>
-            <p className={styles.catalog__price}>Price: ${product.price}</p>
-            <button onClick = {() => 
+            <Link to={`/product/${product.id}`}>
+            <img className={styles.catalog__product_img} src={product.img}></img>
+            <p className={styles.catalog__product_item}>{product.item} </p>
+            </Link>
+            <p className={styles.catalog__product_price}>Price: ${product.price}</p>
+            <button className={styles.catalog__product_btn} onClick = {() => 
               {addToCart({product})
               }}>Add to Cart</button>
           </div>

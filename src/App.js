@@ -6,6 +6,7 @@ import Navbar from './Containers/Navbar';
 
 import Home from './Containers/Home';
 import Checkout from './Containers/Checkout';
+import ProductInfo from './Containers/ProductInfo';
 
 function App() {
 
@@ -18,14 +19,11 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/checkout">
+            <Route path="/checkout">
               <Checkout />
             </Route>
-            <Route path="/about">
-              
-            </Route>
-            <Route path="/contact">
-              
+            <Route path="/product/:id">
+              <ProductInfo/>
             </Route>
           </Switch>
         </div>
